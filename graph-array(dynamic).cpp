@@ -90,7 +90,7 @@ void RetieveVertex(graphPtr g, int Key) {
 	for (int i = 0; i < g->V; i++) {
 		for (int j = 0; j < g->V; j++) {
 			if (g->M[i][j] == Key) {
-				cout << i << " ";
+				cout << "(" << i << ", " << j << ")" << endl;
 			}
 		}
 	}
@@ -98,10 +98,8 @@ void RetieveVertex(graphPtr g, int Key) {
 
 
 bool IsAdjacent(graphPtr g, int V1, int V2) {
-	for (int i = 0; i < g->V; i++) {
-		if (g->M[V1][i] != V2)
-			return true;
-	}
+	if (g->M[V1][V2] != 0)
+		return true;
 	return false;
 }
 
@@ -162,7 +160,7 @@ int main() {
 	cout << endl;
 
 	cout << "IsAdjacent (2, 3)" << endl;
-	cout << IsAdjacent(GP, 2, 3);
+	cout << IsAdjacent(GP, 2, 3) << endl;;
 	cout << endl;
 
 	cout << "Destroy" << endl;
@@ -170,7 +168,7 @@ int main() {
 	cout << endl;
 
 	cout << "IsEmpty" << endl;
-	cout << IsEmpty(GP);
+	cout << IsEmpty(GP) << endl;;
 	cout << endl;
 
 	return 0;
