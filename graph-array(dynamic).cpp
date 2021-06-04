@@ -34,7 +34,7 @@ Gptr Create(int v) {
 void IsEmpty(Gptr G) {
 	for (int i = 0; i < G->V; i++) {
 		for (int j = 0; j < G->V; j++) {
-			if (G->M[i][j]!=0)
+			if (G->M[i][j]==0)
 				cout << "Empty" << endl;
 			else
 				cout << "Not Empty" << endl;
