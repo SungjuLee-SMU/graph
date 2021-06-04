@@ -139,7 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="graph-array%28dynamic%29.cpp" />
+    <ClCompile Include="graph-array%28dynamic%29.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="graph-linked list.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="graph.h" />
